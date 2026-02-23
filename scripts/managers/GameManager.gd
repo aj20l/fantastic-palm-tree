@@ -46,13 +46,5 @@ func end_game():
 	$CanvasLayer/GameOver.visible = true
 	if Input.is_key_pressed(KEY_SPACE):
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-	#$Bat.set_physics_process(false)
-	#$Bat2.set_physics_process(false)
-	pass
-#func play_impact(location):
-	#$impact.play()
 
-#func _on_game_over_gui_input(event):
-	##if event.is_key_pressed(KEY_SPACE):
-		##get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-	#pass # Replace with function body.
+	pass

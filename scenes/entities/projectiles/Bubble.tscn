@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b07bv1hlviv05"]
+[gd_scene load_steps=5 format=3 uid="uid://b07bv1hlviv05"]
 
 [ext_resource type="Script" path="res://scenes/entities/projectiles/Bubble.gd" id="1_aqudo"]
 [ext_resource type="Texture2D" uid="uid://c8fv86t7nbolw" path="res://assets/sprites/orb0.png" id="1_d7c6t"]
+[ext_resource type="AudioStream" uid="uid://dttyaqk2bgyd8" path="res://assets/audio/blow0.ogg" id="3_w2hwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ko3fi"]
 radius = 17.1828
@@ -18,6 +19,10 @@ shape = SubResource("CircleShape2D_ko3fi")
 position = Vector2(-1, 0)
 scale = Vector2(3.176, 3)
 texture = ExtResource("1_d7c6t")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w2hwc")
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_player_entered"]
