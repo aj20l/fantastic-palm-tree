@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck35ub4hn0f76"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/Enemy.gd" id="1_drvhf"]
+[ext_resource type="Texture2D" uid="uid://dmoyh1erfvhqa" path="res://assets/sprites/robot000.png" id="2_g1v0v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_es3o6"]
+radius = 18.0
+height = 62.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy", "Enemy2"]]
+script = ExtResource("1_drvhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["Enemy2"]]
+texture = ExtResource("2_g1v0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy2"]]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_es3o6")
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["Enemy2"]]
+enabled = false
+
+[node name="LedgeRay" type="RayCast2D" parent="." groups=["Enemy2"]]
+target_position = Vector2(-34, 37)
