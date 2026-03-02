@@ -1,0 +1,1 @@
+asset_id,type (sprite_sheet|tileset|ui_icon|bg|sfx|music|font),tool,prompt_summary (short),iterations (int),manual_edit_minutes (int),main_problems,godot_import_notes (e.g., “Filter off, Mipmaps off, Lossless”),final_path (in assets_ai/processed/)
