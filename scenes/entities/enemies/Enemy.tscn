@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck35ub4hn0f76"]
+[gd_scene load_steps=5 format=3 uid="uid://ck35ub4hn0f76"]
 
 [ext_resource type="Script" path="res://scenes/entities/enemies/Enemy.gd" id="1_drvhf"]
 [ext_resource type="Texture2D" uid="uid://dmoyh1erfvhqa" path="res://assets/sprites/robot000.png" id="2_g1v0v"]
+[ext_resource type="AudioStream" uid="uid://blysj7pfmb3pm" path="res://assets/audio/a-whirring-mechanical-sound-akin-to-gears-turning-_030326.mp3" id="3_4ub6i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_es3o6"]
 radius = 18.0
@@ -22,3 +23,6 @@ enabled = false
 
 [node name="LedgeRay" type="RayCast2D" parent="." groups=["Enemy2"]]
 target_position = Vector2(-34, 37)
+
+[node name="MOVESOUND" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4ub6i")

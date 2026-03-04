@@ -15,6 +15,7 @@ var _lifetime_timer: float = 0.0
 
 
 func _ready():
+	
 	_horizontal_timer = horizontal_time
 	_lifetime_timer = lifetime
 	body_entered.connect(_on_body_entered)

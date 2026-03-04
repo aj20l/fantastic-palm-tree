@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dg0crtl553xq5"]
 
-[ext_resource type="AudioStream" uid="uid://jbsctuip2l7s" path="res://assets/audio/theme.ogg" id="1_t61w6"]
+[ext_resource type="AudioStream" uid="uid://b63a3a4hgs58j" path="res://assets/audio/an-energetic-track-chiptune-based-accompanying-cave-adventures-with-a-fairly-fast-bpm-of-190.it-should-be-able-to-be-a-looping-track-_030326.mp3" id="1_hmnfh"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_t61w6")
+stream = ExtResource("1_hmnfh")
 autoplay = true

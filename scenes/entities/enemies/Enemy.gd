@@ -10,6 +10,11 @@ var state=1#active mode
 signal enemy_defeated
 var health := 1 
 
+
+func _ready():
+	$MOVESOUND.play()
+	print($MOVESOUND.is_playing())
+	pass
 func _physics_process(delta):
 	# Apply gravity
 

@@ -8,7 +8,7 @@ func _ready():
 @export var base_speed := 400
 signal player_died
 @export var gravity : float = 1200.0
-@export var jump_velocity : float = -600.0
+@export var jump_velocity : float = -1000.0
 @export var lives : int
 var max_lives : int = 10
 var facing
@@ -29,6 +29,7 @@ func _physics_process(delta):
 	else:
 		velocity.y = 0
 	if Input.is_action_just_pressed("move_up") and is_on_floor():
+		$JUMPSOUND.play()
 		velocity.y = jump_velocity
 
 
@@ -38,6 +39,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("shoot"):
 		shoot(facing)
 		
+	if Input.is_action_just_pressed("move_left"):
+		pass
+	if Input.is_action_just_pressed("move_right"):
+		pass
+		
+	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
